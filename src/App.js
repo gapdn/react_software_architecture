@@ -1,13 +1,15 @@
 import React from 'react';
 import { CounterButton } from './CounterButton';
-import { CounterProvider } from './CounterProvider';
+import { Counter } from './Counter';
+
+const counter = new Counter();
 
 const App = () => {
 	return (
-    <CounterProvider>
+    <>
       <h1>State Management Example</h1>
-      <CounterButton />
-    </CounterProvider>
+      <CounterButton counter={counter}/>
+    </>
   );
 }
 
